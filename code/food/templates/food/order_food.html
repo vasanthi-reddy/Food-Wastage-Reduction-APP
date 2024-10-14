@@ -1,0 +1,51 @@
+{% extends 'food/home.html' %}
+{% block content %}
+<center>
+<h1 class="display-3" style="background-color:#ffb800;color:#A1A1A2;font-weight: normal;">Food Order Details</h1>
+   
+	
+        <div class="section full mt-1 mb-2">
+           
+            <form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+ 
+
+ 
+
+
+            <div class="wide-block p-0">
+
+                <div class="table-responsive">
+                    <table class="table">
+                    
+                        <thead>
+                            <tr>
+                                <th scope="col">{{ order_form.label_tag }}</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"></th>
+                                  <td>
+       
+          {{ order_form}}
+         
+        </td>
+                               
+                            </tr>
+                           
+                        </tbody>
+                        
+
+                    </table>
+<button type="submit" style="width:100%;background-color:#A1A1A2;color:#fff;border-radius:10px;font-weight:bold;">Submit</button>
+                     
+                </div>
+
+            </div>
+        </div>
+ 
+</form>
+</center>
+{% endblock %}
